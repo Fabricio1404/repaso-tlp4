@@ -1,0 +1,13 @@
+{
+  "name": "tlp4-primer-cuatrimestre",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TLP IV - Primer cuatrimestre: POO, patrones de diseño y SOLID en TypeScript",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3"
+  }
+}

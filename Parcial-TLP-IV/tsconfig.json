@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "erasableSyntaxOnly": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "types": []
+  },
+  "include": ["01-typescript-y-poo/**/*.ts", "02-patrones-de-diseno/**/*.ts", "03-principios-solid/**/*.ts", "10-simulacros/primer-parcial-veterinaria/**/*.ts"]
+}

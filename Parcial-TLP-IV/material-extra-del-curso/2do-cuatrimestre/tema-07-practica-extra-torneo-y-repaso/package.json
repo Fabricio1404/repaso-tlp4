@@ -1,0 +1,15 @@
+{
+  "name": "tlp4-torneo-deportivo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "TLP IV - Práctica extra: Torneo Deportivo (POO del primer cuatrimestre + pruebas del segundo)",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.3",
+    "vitest": "~4.0.18"
+  }
+}

@@ -1,0 +1,37 @@
+# F3 · Completá cada ___ (ver ENUNCIADOS.md). No hace falta ejecutarlo.
+services:
+  db:
+    image: ___                       # (1) imagen de PostgreSQL 16
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    volumes:
+      - ___:/var/lib/postgresql/data # (2) volumen con nombre para persistir
+    healthcheck:
+      test: ["CMD-SHELL", "___"]     # (3) comando que dice si PostgreSQL está listo
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  backend:
+    build: ___                       # (4) carpeta del backend
+    env_file: ___                    # (5) archivo con las variables
+    ports:
+      - "${API_PORT}:___"            # (6) puerto DENTRO del contenedor
+    depends_on:
+      db:
+        condition: ___               # (7) esperar a que la base esté sana
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+
+volumes:
+  ___:                               # (8) declarar el volumen
